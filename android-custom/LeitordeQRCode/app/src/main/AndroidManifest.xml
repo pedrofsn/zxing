@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.google.zxing.client.android">
-    <!-- br.pedrofsn.qrcode -->
+    package="br.pedrofsn.leitorqrcode">
+    <!-- br.pedrofsn.qrcode  com.google.zxing.client.android-->
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -50,7 +50,7 @@
         android:theme="@style/CaptureTheme">
 
         <activity
-            android:name=".CaptureActivity"
+            android:name="br.pedrofsn.leitorqrcode.client.android.CaptureActivity"
             android:screenOrientation="sensorLandscape"
             android:clearTaskOnLaunch="true"
             android:stateNotNeeded="true"
@@ -114,11 +114,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PreferencesActivity"
+            android:name="br.pedrofsn.leitorqrcode.client.android.PreferencesActivity"
             android:label="@string/preferences_name"
             android:stateNotNeeded="true" />
         <activity
-            android:name=".encode.EncodeActivity"
+            android:name="br.pedrofsn.leitorqrcode.client.android.encode.EncodeActivity"
             android:stateNotNeeded="true">
             <intent-filter>
                 <action android:name="com.google.zxing.client.android.ENCODE" />
@@ -138,7 +138,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".book.SearchBookContentsActivity"
+            android:name="br.pedrofsn.leitorqrcode.client.android.book.SearchBookContentsActivity"
             android:label="@string/sbc_name"
             android:stateNotNeeded="true"
             android:screenOrientation="sensorLandscape">
@@ -148,7 +148,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".share.ShareActivity"
+            android:name="br.pedrofsn.leitorqrcode.client.android.share.ShareActivity"
             android:stateNotNeeded="true"
             android:screenOrientation="user">
             <intent-filter>
@@ -157,19 +157,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".history.HistoryActivity"
+            android:name="br.pedrofsn.leitorqrcode.client.android.history.HistoryActivity"
             android:label="@string/history_title"
             android:stateNotNeeded="true" />
         <activity
-            android:name=".share.BookmarkPickerActivity"
+            android:name="br.pedrofsn.leitorqrcode.client.android.share.BookmarkPickerActivity"
             android:label="@string/bookmark_picker_name"
             android:stateNotNeeded="true" />
         <activity
-            android:name=".share.AppPickerActivity"
+            android:name="br.pedrofsn.leitorqrcode.client.android.share.AppPickerActivity"
             android:label="@string/app_picker_name"
             android:stateNotNeeded="true" />
         <activity
-            android:name=".HelpActivity"
+            android:name="br.pedrofsn.leitorqrcode.client.android.HelpActivity"
             android:label="@string/menu_help"
             android:screenOrientation="user"
             android:stateNotNeeded="true" />
