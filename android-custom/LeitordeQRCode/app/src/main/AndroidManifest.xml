@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.pedrofsn.leitorqrcode">
-    <!-- br.pedrofsn.qrcode  com.google.zxing.client.android-->
+    <!-- br.pedrofsn.qrcode  br.pedrofsn.leitorqrcode.client.android-->
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -61,7 +61,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <intent-filter>
-                <action android:name="com.google.zxing.client.android.SCAN" />
+                <action android:name="br.pedrofsn.leitorqrcode.SCAN" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <!-- Allow web apps to launch Barcode Scanner by linking to http://zxing.appspot.com/scan. -->
@@ -121,7 +121,7 @@
             android:name="br.pedrofsn.leitorqrcode.client.android.encode.EncodeActivity"
             android:stateNotNeeded="true">
             <intent-filter>
-                <action android:name="com.google.zxing.client.android.ENCODE" />
+                <action android:name="br.pedrofsn.leitorqrcode.ENCODE" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <!-- This allows us to handle the Share button in Contacts. -->
@@ -143,7 +143,7 @@
             android:stateNotNeeded="true"
             android:screenOrientation="sensorLandscape">
             <intent-filter>
-                <action android:name="com.google.zxing.client.android.SEARCH_BOOK_CONTENTS" />
+                <action android:name="br.pedrofsn.leitorqrcode.SEARCH_BOOK_CONTENTS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
@@ -152,7 +152,7 @@
             android:stateNotNeeded="true"
             android:screenOrientation="user">
             <intent-filter>
-                <action android:name="com.google.zxing.client.android.SHARE" />
+                <action android:name="br.pedrofsn.leitorqrcode.SHARE" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
