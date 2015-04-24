@@ -171,12 +171,13 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
     private void showInterstitial() {
         if (interstitial != null && interstitial.isLoaded()) {
             interstitial.show();
+        } else {
+            super.onBackPressed();
         }
     }
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
         showInterstitial();
     }
 

@@ -3,8 +3,9 @@
     package="br.pedrofsn.leitorqrcode">
     <!-- br.pedrofsn.qrcode  br.pedrofsn.leitorqrcode.client.android-->
 
-    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
@@ -173,6 +174,19 @@
             android:label="@string/menu_help"
             android:screenOrientation="user"
             android:stateNotNeeded="true" />
+
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+
     </application>
+
+    <meta-data
+        android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version" />
+
+    <meta-data
+        android:name="ADMOB_ALLOW_LOCATION_FOR_ADS"
+        android:value="true" />
 
 </manifest>
