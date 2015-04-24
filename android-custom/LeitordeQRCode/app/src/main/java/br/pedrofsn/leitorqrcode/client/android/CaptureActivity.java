@@ -120,7 +120,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
     private BeepManager beepManager;
     private AmbientLightManager ambientLightManager;
 
-    private InterstitialAd interstitial;
+//    private InterstitialAd interstitial;
 
     ViewfinderView getViewfinderView() {
         return viewfinderView;
@@ -151,33 +151,33 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
     }
 
     private void configIntersticial() {
-        interstitial = new InterstitialAd(this);
-        interstitial.setAdUnitId("ca-app-pub-3875707990385821/5076058993");
-
-        interstitial.loadAd(new AdRequest.Builder()
-                .build());
-        interstitial.setAdListener(new AdListener() {
-            @Override
-            public void onAdClosed() {
-                super.onAdClosed();
-                finish();
-            }
-        });
+//        interstitial = new InterstitialAd(this);
+//        interstitial.setAdUnitId("ca-app-pub-3875707990385821/5076058993");
+//
+//        interstitial.loadAd(new AdRequest.Builder()
+//                .build());
+//        interstitial.setAdListener(new AdListener() {
+//            @Override
+//            public void onAdClosed() {
+//                super.onAdClosed();
+//                finish();
+//            }
+//        });
     }
 
     private boolean showInterstitial() {
-        if (interstitial != null && interstitial.isLoaded()) {
-            interstitial.show();
-            return true;
-        }
+//        if (interstitial != null && interstitial.isLoaded()) {
+//            interstitial.show();
+//            return true;
+//        }
         return false;
     }
 
     @Override
     public void onBackPressed() {
-        if (!showInterstitial()) {
+//        if (!showInterstitial()) {
             super.onBackPressed();
-        }
+//        }
     }
 
     @Override
