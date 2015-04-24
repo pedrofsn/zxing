@@ -152,13 +152,10 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
 
     private void configIntersticial() {
         interstitial = new InterstitialAd(this);
-        interstitial.setAdUnitId("");
+        interstitial.setAdUnitId("ca-app-pub-3875707990385821/5076058993");
 
-        AdRequest adRequest = new AdRequest.Builder()
-                .setGender(AdRequest.GENDER_MALE)
-                .build();
-
-        interstitial.loadAd(adRequest);
+        interstitial.loadAd(new AdRequest.Builder()
+                .build());
         interstitial.setAdListener(new AdListener() {
             @Override
             public void onAdClosed() {
@@ -168,17 +165,19 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
         });
     }
 
-    private void showInterstitial() {
+    private boolean showInterstitial() {
         if (interstitial != null && interstitial.isLoaded()) {
             interstitial.show();
-        } else {
-            super.onBackPressed();
+            return true;
         }
+        return false;
     }
 
     @Override
     public void onBackPressed() {
-        showInterstitial();
+        if (!showInterstitial()) {
+            super.onBackPressed();
+        }
     }
 
     @Override
@@ -642,6 +641,7 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
             }
         }
 
+        //showInterstitial();
     }
 
     // Briefly show the contents of the barcode, then handle the result outside Barcode Scanner.
@@ -727,6 +727,8 @@ public final class CaptureActivity extends Activity implements SurfaceHolder.Cal
             }
 
         }
+
+        //showInterstitial();
     }
 
     private void sendReplyMessage(int id, Object arg, long delayMS) {
